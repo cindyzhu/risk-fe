@@ -1,6 +1,6 @@
 import axiosInstance from '@/interceptors/axios'
-import { loginApi, listApi} from '@/constants/api'
-import { UserInfo, QueryInfo, Result} from '@/constants/variableType'
+import { loginApi, userInfoApi, loanApi} from '@/constants/api'
+import { UserInfo, Result} from '@/constants/variableType'
 
 // login  module
 export const login = (data: UserInfo, callback?: any) => {
@@ -20,12 +20,60 @@ export const loginOut = (callback?: any) => {
     callback(res)
   })
 }
-// lIST  module
-export const getListData = (data: QueryInfo, callback?: any) => {
+
+export const getUserList = (data: any, callback?: any) => {
   axiosInstance({
     method: 'post',
     data: data,
-    url: listApi.getList
+    url: userInfoApi.userList
+  }).then((res: Result) => {
+    callback(res)
+  })
+}
+export const getUserInfo = (data: any, callback?: any) => {
+  axiosInstance({
+    method: 'post',
+    data: data,
+    url: userInfoApi.userInfo
+  }).then((res: Result) => {
+    callback(res)
+  })
+}
+export const getContactsList = (data: any, callback?: any) => {
+  axiosInstance({
+    method: 'post',
+    data: data,
+    url: userInfoApi.contactsList
+  }).then((res: Result) => {
+    callback(res)
+  })
+}
+export const getRecordsList = (data: any, callback?: any) => {
+  axiosInstance({
+    method: 'post',
+    data: data,
+    url: userInfoApi.recordsList
+  }).then((res: Result) => {
+    callback(res)
+  })
+}
+
+export const getLoanList = (data: any, callback?: any) => {
+  axiosInstance({
+    method: 'post',
+    data: data,
+    url: userInfoApi.loanList
+  }).then((res: Result) => {
+    callback(res)
+  })
+}
+
+
+export const getRepayList = (data: any, callback?: any) => {
+  axiosInstance({
+    method: 'post',
+    data: data,
+    url: loanApi.repayList
   }).then((res: Result) => {
     callback(res)
   })

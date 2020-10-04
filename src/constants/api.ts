@@ -4,6 +4,15 @@ export const loginApi = {
   login: `${host}/user_login`,
   loginOut: `${host}/user_logout`
 }
-export const listApi = {
-  getList: `${host}/list`
+
+export const userInfoApi = {
+  userList: `${host}/user_list`,
+  userInfo: `${host}/user_info`,
+  contactsList: `${host}/contacts_list`,
+  recordsList: `${host}/records_list`,
+  loanList: `${host}/loan_list`
+}
+
+export const loanApi = {
+  repayList: `${host}/repay_list`
 }

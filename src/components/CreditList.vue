@@ -13,7 +13,7 @@
             style="margin-left: 30px;"
             :loading="searchLoading"
             @click="search"
-          >查询222</Button>
+          >查询</Button>
         </Col>
       </Row>
     </Form>
@@ -29,7 +29,7 @@ import { Component, Vue } from 'vue-property-decorator'
 import { getPageList } from '@/common/until'
 
 @Component
-export default class Model extends Vue {
+export default class CreditList extends Vue {
 
   @Getter('list') list: any
   @Action('getList') getList: any
@@ -51,9 +51,14 @@ export default class Model extends Vue {
   }
   curListInfo: any = []
   columns1: any = [
-    { title: '名称', key: 'title' },
-    { title: '创建时间', key: 'create_time' },
-    { title: '创建人', key: 'operator'}
+    { title: '日期', key: 'title' },
+    { title: '接口名称', key: 'title' },
+    { title: '调用PV', key: 'title' },
+    { title: '调用UV', key: 'create_time' },
+    { title: '客户类型（新客/老客）', key: 'operator'},
+    { title: '授信通过UV', key: 'operator'},
+    { title: '授信通过率', key: 'operator'},
+    { title: '花费', key: 'operator'}
   ]
 
   mounted() {

@@ -1,0 +1,110 @@
+{
+  "msg": "获取成功",
+  "code": 200,
+  "data": {
+    "page": {
+      "total": 753,
+      "pages": 76,
+      "current": 1,
+      "pageSize": 10
+    },
+    "data": [
+      {
+        "id": 31076,
+        "mobile": "9877414356",
+        "create_time": "2020-10-01 19:29:12",
+        "platform": "android",
+        "name": "test",
+        "channel": "GoogleAdws",
+        "client_id": "2010011114433165",
+        "aadhaar_no": "",
+        "education": "",
+        "state": "20"
+      },
+      {
+        "id": 22222,
+        "mobile": "9877414356",
+        "create_time": "2020-10-01 19:29:12",
+        "platform": "android",
+        "name": "test",
+        "channel": "GoogleAdws",
+        "client_id": "2010011114433165",
+        "aadhaar_no": "",
+        "education": "",
+        "state": "20"
+      },
+      {
+        "id": 3333,
+        "mobile": "9877414356",
+        "create_time": "2020-10-01 19:29:12",
+        "platform": "android",
+        "name": "test",
+        "channel": "GoogleAdws",
+        "client_id": "2010011114433165",
+        "aadhaar_no": "",
+        "education": "",
+        "state": "20"
+      },
+      {
+        "id": 44444,
+        "mobile": "9877414356",
+        "create_time": "2020-10-01 19:29:12",
+        "platform": "android",
+        "name": "test",
+        "channel": "GoogleAdws",
+        "client_id": "2010011114433165",
+        "aadhaar_no": "",
+        "education": "",
+        "state": "20"
+      },
+      {
+        "id": 5555,
+        "mobile": "9877414356",
+        "create_time": "2020-10-01 19:29:12",
+        "platform": "android",
+        "name": "test",
+        "channel": "GoogleAdws",
+        "client_id": "2010011114433165",
+        "aadhaar_no": "",
+        "education": "",
+        "state": "20"
+      },
+      {
+        "id": 6666,
+        "mobile": "9877414356",
+        "create_time": "2020-10-01 19:29:12",
+        "platform": "android",
+        "name": "test",
+        "channel": "GoogleAdws",
+        "client_id": "2010011114433165",
+        "aadhaar_no": "",
+        "education": "",
+        "state": "20"
+      },
+      {
+        "id": 7777,
+        "mobile": "9877414356",
+        "create_time": "2020-10-01 19:29:12",
+        "platform": "android",
+        "name": "test",
+        "channel": "GoogleAdws",
+        "client_id": "2010011114433165",
+        "aadhaar_no": "",
+        "education": "",
+        "state": "20"
+      },
+      {
+        "id": 8888,
+        "mobile": "9877414356",
+        "create_time": "2020-10-01 19:29:12",
+        "platform": "android",
+        "name": "test",
+        "channel": "GoogleAdws",
+        "client_id": "2010011114433165",
+        "aadhaar_no": "",
+        "education": "",
+        "state": "20"
+      }
+    ]
+  }
+}

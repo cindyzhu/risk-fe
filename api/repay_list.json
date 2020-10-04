@@ -1,0 +1,75 @@
+{
+  "msg":"获取成功",
+  "code":200,
+  "data": {
+    "data":[
+      {
+          "id":40321,
+          "loan_no":"00017538269",
+          "name":"Neeraj Jilajit Pathak",
+          "mobile":"9867411069",
+          "score_new":12,
+          "score_old":2323,
+          "sf_score": 12,
+          "reject_rules": "testeee",
+          "credit_rules": "testeee",
+          "direct_reject": 1
+      },
+      {
+        "id":232323,
+        "loan_no":"00017538269",
+        "name":"Neeraj Jilajit Pathak",
+        "mobile":"9867411069",
+        "score_new":12,
+        "score_old":2323,
+        "sf_score": 12,
+        "reject_rules": "testeee",
+        "credit_rules": "testeee",
+        "direct_reject": 0
+      },
+      {
+        "id":232323,
+        "loan_no":"00017538269",
+        "name":"Neeraj Jilajit Pathak",
+        "mobile":"9867411069",
+        "score_new":12,
+        "score_old":2323,
+        "sf_score": 12,
+        "reject_rules": "testeee",
+        "credit_rules": "testeee",
+        "direct_reject": 1
+    },
+    {
+        "id":23222222,
+        "loan_no":"00017538269",
+        "name":"Neeraj Jilajit Pathak",
+        "mobile":"9867411069",
+        "score_new":12,
+        "score_old":2323,
+        "sf_score": 12,
+        "reject_rules": "testeee",
+        "credit_rules": "testeee",
+        "direct_reject": 0
+    },
+    {
+        "id":5555,
+        "loan_no":"00017538269",
+        "name":"Neeraj Jilajit Pathak",
+        "mobile":"9867411069",
+        "score_new":12,
+        "score_old":2323,
+        "sf_score": 12,
+        "reject_rules": "testeee",
+        "credit_rules": "testeee",
+        "direct_reject": 0
+    }
+     
+  ],
+  "page":{
+      "total":40311,
+      "pages":4032,
+      "current":1,
+      "pageSize":10
+  }
+  }
+}

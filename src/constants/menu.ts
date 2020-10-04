@@ -2,13 +2,19 @@ import { MenuList } from '@/constants/variableType'
 
 export const menuList: Array<MenuList> = [
   {
-    title: '列表页',
-    name: 'report',
+    title: '用户基本信息',
+    name: 'userinfo',
+    icon: 'android-people'
+  },
+  {
+    title: '授信结果查询',
+    name: 'loan',
     icon: 'md-list',
-    subNav: [{
-      title: '列表详情',
-      name: 'list'
-    }
-    ]
+
+  },
+  {
+    title: '授信数据',
+    name: 'credit',
+    icon: 'md-list'
   }
 ]

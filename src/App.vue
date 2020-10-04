@@ -6,6 +6,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import '@/common/app.scss'
 @Component
 export default class App extends Vue {}
 </script>

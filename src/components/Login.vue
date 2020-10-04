@@ -2,8 +2,8 @@
   <div class="m-login">
     <Form ref="loginForm" :rules="validationLogin" :model="formInfo">
       <h2 class="login-title">业务系统</h2>
-      <FormItem prop="userName" label="用户名">
-        <Input placeholder="请输入用户名" v-model="formInfo.userName"></Input>
+      <FormItem prop="client_id" label="用户名">
+        <Input placeholder="请输入用户名" v-model="formInfo.client_id"></Input>
       </FormItem>
       <FormItem prop="userPassword" label="密码">
         <Input type="password" placeholder="请输入密码" v-model="formInfo.userPassword"></Input>
@@ -17,7 +17,6 @@
         <Button type="primary" long class="login-btn" @click="submitLogin" :loading="btnLoading">登录</Button>
       </FormItem>
     </Form>
-    <p class="copy-right">©️版权信息归时光金科所有</p>
   </div>
 </template>
 
@@ -29,7 +28,7 @@ export default class Login extends Vue {
   btnLoading = false
   remember = false
   formInfo: any = {
-    userName: '',
+    client_id: '',
     userPassword: ''
   }
   validationLogin = {}
@@ -49,7 +48,7 @@ export default class Login extends Vue {
   }
   created() {
     this.validationLogin = {
-      userName: { validator: this.validateUserName, trigger: 'blur' },
+      client_id: { validator: this.validateUserName, trigger: 'blur' },
       userPassword: { validator: this.validateUserPassword, trigger: 'blur' }
     }
     this._getLoginInfo()
@@ -60,7 +59,7 @@ export default class Login extends Vue {
       if (valid) {
         this.btnLoading = true
         login({
-          username: this.formInfo.userName,
+          client_id: this.formInfo.client_id,
           password: this.formInfo.userPassword
         }, (res: any) => {
           if (res.code === 200) {
@@ -87,7 +86,7 @@ export default class Login extends Vue {
     const loginInfo = localStorage.getItem('loginInfo')
     if (loginInfo) {
       this.remember = true
-      this.formInfo.userName = loginInfo.split('_')[0]
+      this.formInfo.client_id = loginInfo.split('_')[0]
       this.formInfo.userPassword = loginInfo.split('_')[1]
     }
   }

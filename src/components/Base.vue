@@ -3,18 +3,11 @@
     <Layout>
       <Header class="header-bar">
         <Menu mode="horizontal" theme="dark" class="menu-warp" :active-name="activeName" :open-names="openName">
-          <h2 class="system-name" @click="toHome">后台系统</h2>
+          <h2 class="system-name" @click="toHome">风控系统</h2>
           <div v-for="(v,index) in navList" :key="index">
-            <Submenu :name="v.name">
-              <template slot="title">
-                {{v.title}}
-              </template>
-              <div v-for="(cur,k) in v.subNav" :key="k">
-                <MenuItem @click.native="handleSkip(cur.name)" :name="cur.name" >
-                  {{cur.title}}
+               <MenuItem @click.native="handleSkip(v.name)" :name="v.name" >
+                  {{v.title}}
                 </MenuItem>
-              </div>
-            </Submenu>
           </div>
           <ul class="login-info">
             <li>欢迎你，{{userName}}</li>
@@ -24,12 +17,6 @@
       </Header>
       <Layout>
         <Layout class="main">
-          <Breadcrumb>
-            <BreadcrumbItem
-              :key="index"
-              :to="bread.to"
-              v-for="(bread, index) in breadcrumbInfo">{{bread.title}}</BreadcrumbItem>
-          </Breadcrumb>
           <Content class="main-info">
             <router-view></router-view>
           </Content>
@@ -63,36 +50,19 @@ export default class Base extends Vue {
     })
   }
   toHome() {
+    if (this.activeName === 'home') {
+      return
+    }
     this.$router.push({path: '/home'})
   }
   handleSkip(name: string) {
+    if (this.activeName === name) {
+      return
+    }
     this.activeName = name
     this.$router.push({
       name: name
     })
-  }
-  get breadcrumbInfo () {
-    return this._creatBreadcrumb()
-  }
-  _creatBreadcrumb() {
-    const breadInfo: any = []
-    const curName = this.$route.name
-    this.navList.forEach((root: MenuList) => {
-      if (root.subNav && root.subNav.length) {
-        root.subNav.forEach((child: MenuItem) => {
-          if (child.name === curName) {
-            breadInfo.push({
-              title: root.title
-            })
-            breadInfo.push({
-              title: child.title,
-              to: { name: child.name }
-            })
-          }
-        })
-      }
-    })
-    return breadInfo
   }
   created() {
     this.navList = menuList

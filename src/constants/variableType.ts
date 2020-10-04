@@ -1,5 +1,5 @@
 export interface UserInfo {
-  username: string
+  client_id: string
   password: string
 }
 export interface QueryInfo {
@@ -17,8 +17,7 @@ export interface Result {
 export interface MenuList {
   title: string,
   name: string,
-  icon: string,
-  subNav: Array<MenuItem>,
+  icon: string
 }
 
 export interface MenuItem {
